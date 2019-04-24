@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% for food in foods%}
+    <h3>Món ăn số {{loop.index}}</h3>
+    <b>Tieu de: </b>{{food.title}}<br>
+    <b>Mo ta: </b>{{food.description}}<br>
+    <img src="{{food.link}}"><br>
+    {% if food .type == "eat"%}
+        <p>Day la mon an</p>
+    {% elif food.type == "drink"%}
+        <p>Day la mon uong</p>
+    {% endif %}
+    <a href="/food/{{ loop.index0 }}">Chi tiết món ăn</a>
+    <hr>
+
+    {% endfor %}
+    
+</html>
